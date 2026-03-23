@@ -30,6 +30,9 @@
         />
         <link rel="stylesheet" href="static/style.css" />
         <script async src="https://tally.so/widgets/embed.js"></script>
+        <script>
+            const openToWork = true;
+        </script>
     </head>
     <body>
         <nav>
@@ -151,6 +154,117 @@
                             <div class="tech-line">
                                 Go · Go templates · HTMX
                             </div>
+                            <div class="screenshot-container" id="carousel">
+                                <div
+                                    class="carousel-track"
+                                    id="js-carousel-track"
+                                >
+                                    <div class="carousel-slide">
+                                        <a
+                                            href="static/topaze/water.png"
+                                            target="_blank"
+                                            rel="noopener"
+                                        >
+                                            <img
+                                                class="js-carousel-img"
+                                                src="static/topaze/water.png"
+                                                alt="Suivi de consommation d'eau avec un graphique des relevés par mois et résumé sur l'année"
+                                                data-caption="Suivi d'eau"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <a
+                                            href="static/topaze/expenses.png"
+                                            target="_blank"
+                                            rel="noopener"
+                                        >
+                                            <img
+                                                class="js-carousel-img"
+                                                src="static/topaze/expenses.png"
+                                                alt="Liste d'opérations bancaires avec le total des sommes et la fonction d'export"
+                                                data-caption="Dépenses"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="carousel-slide">
+                                        <a
+                                            href="static/topaze/dashboard.png"
+                                            target="_blank"
+                                            rel="noopener"
+                                        >
+                                            <img
+                                                class="js-carousel-img"
+                                                style="
+                                                    height: 287px;
+                                                    width: auto;
+                                                "
+                                                src="static/topaze/dashboard.png"
+                                                alt="Tableau de bord de l'application avec une synthèse des différents modules (état du serveur, horaires de piscines, cumul des dépenses, consommation d'eau)"
+                                                data-caption="Tableau de bord"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-footer">
+                                    <span
+                                        class="screenshot-caption"
+                                        id="js-carousel-caption"
+                                    ></span>
+                                    <div class="carousel-nav">
+                                        <div
+                                            class="carousel-dots"
+                                            id="carousel-dots"
+                                        >
+                                            <span
+                                                class="carousel-dot js-carousel-dot active"
+                                            ></span>
+                                            <span
+                                                class="carousel-dot js-carousel-dot"
+                                            ></span>
+                                            <span
+                                                class="carousel-dot js-carousel-dot"
+                                            ></span>
+                                        </div>
+                                        <button
+                                            class="carousel-btn"
+                                            id="js-carousel-prev"
+                                            aria-label="Image précédente"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <polyline
+                                                    points="15 18 9 12 15 6"
+                                                />
+                                            </svg>
+                                        </button>
+                                        <button
+                                            class="carousel-btn"
+                                            id="js-carousel-next"
+                                            aria-label="Image suivante"
+                                        >
+                                            <svg
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            >
+                                                <polyline
+                                                    points="9 18 15 12 9 6"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -235,8 +349,9 @@
 
                             <div class="screenshot-container">
                                 <img
-                                    src="static/dolphin-kdrive.png"
-                                    alt="Plugin KIO kDrive dans Dolphin"
+                                    src="static/kio-kdrive/dolphin-kdrive.png"
+                                    alt="Gestionnaire de fichiers Dolphin affichant les dossiers kDrive dans l'arborescence, navigables
+                                      comme des fichiers locaux"
                                 />
                                 <div class="screenshot-caption">
                                     kDrive intégré nativement dans Dolphin via
@@ -410,40 +525,7 @@
 
         <footer>Maxence · Développeur freelance · Nantes</footer>
 
-        <script>
-            const openToWork = true;
-
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                    const target = document.querySelector(
-                        this.getAttribute("href"),
-                    );
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                        });
-                    }
-                });
-            });
-
-            const $heroOtw = document.getElementById("js-hero-openToWork");
-            const $contactOtw = document.getElementById(
-                "js-contact-openToWork",
-            );
-
-            if (openToWork) {
-                $heroOtw.innerText = "Disponible pour une nouvelle mission";
-                $contactOtw.innerText =
-                    "Disponible dès maintenant pour une nouvelle mission.";
-            } else {
-                $heroOtw.innerText =
-                    "En mission · Ouvert aux échanges pour des projets à venir";
-                $contactOtw.innerText =
-                    "Actuellement en mission. Ouvert aux échanges pour des projets à venir.";
-            }
-        </script>
+        <script src="static/scripts.js"></script>
 
         <!-- 100% privacy-first analytics -->
         <script

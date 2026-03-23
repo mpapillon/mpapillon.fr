@@ -432,6 +432,118 @@ footer {
     text-align: center;
 }
 
+/* — CAROUSEL — */
+.screenshot-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-contrast);
+    background: var(--bg-contrast-inset);
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.screenshot-placeholder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.screenshot-placeholder svg {
+    width: 32px;
+    height: 32px;
+    color: var(--border-contrast);
+}
+
+.screenshot-placeholder span {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-contrast-secondary);
+    opacity: 0.5;
+}
+
+.carousel-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-top: 1px solid var(--border-contrast);
+}
+
+.carousel-footer .screenshot-caption {
+    border: none;
+}
+
+.carousel-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text-contrast-secondary);
+    opacity: 0.3;
+    transition: opacity 0.3s;
+}
+
+.carousel-dot.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    background: none;
+    border: 1px solid var(--border-contrast);
+    border-radius: 4px;
+    color: var(--text-contrast-secondary);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 0;
+}
+
+.carousel-btn:hover {
+    border-color: var(--text-contrast-secondary);
+    color: var(--text-contrast);
+}
+
+.carousel-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
 /* — RESPONSIVE — */
 @media (max-width: 640px) {
     .hero-content {
