@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="light dark" />
+        <title>Maxence - Développeur freelance</title>
+        <link rel="preconnect" href="https://fonts.bunny.net" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.bunny.net/css?family=ibm-plex-mono:400,500|ibm-plex-serif:400,500"
+        />
+        <link rel="stylesheet" href="static/style.css" />
+        <script async src="https://tally.so/widgets/embed.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-inner">
+                <a href="#" class="nav-name">mpapillon</a>
+                <div class="nav-links">
+                    <a href="#projects">Réalisations</a>
+                    <a href="#mindset">Approche</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="section-inner">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Maxence Papillon</h1>
+                        <p class="subtitle">
+                            Développeur freelance<br />
+                            +10 ans d'expérience - backend, mobile et systèmes
+                            Linux.
+                        </p>
+                        <div class="status">
+                            <span class="dot"></span>
+                            <span id="js-hero-openToWork"></span>
+                        </div>
+                    </div>
+                    <div class="hero-portrait">
+                        <img src="static/portrait.jpg" alt="Maxence" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-contrast">
+            <div class="section-inner">
+                <div class="section-label">Ce que je fais</div>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill-left">
+                            <svg
+                                class="skill-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="2"
+                                    y="2"
+                                    width="20"
+                                    height="8"
+                                    rx="2"
+                                    ry="2"
+                                />
+                                <rect
+                                    x="2"
+                                    y="14"
+                                    width="20"
+                                    height="8"
+                                    rx="2"
+                                    ry="2"
+                                />
+                                <line x1="6" y1="6" x2="6.01" y2="6" />
+                                <line x1="6" y1="18" x2="6.01" y2="18" />
+                            </svg>
+                            <div class="skill-title">
+                                Backend &<br />systèmes distribués
+                            </div>
+                        </div>
+                        <div class="skill-body">
+                            <p>
+                                <strong>Core banking temps réel</strong> — Dans
+                                le cadre d'une néobanque, j'ai participé à la
+                                conception et au développement du moteur de
+                                traitement des opérations bancaires.
+                                Architecture événementielle en temps réel,
+                                conçue pour absorber les pics de charge et de
+                                gros volume de données.
+                            </p>
+                            <div class="tech-line">
+                                Scala · Cassandra · Kafka
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-left">
+                            <svg
+                                class="skill-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                                />
+                                <path d="M2 12h20" />
+                            </svg>
+                            <div class="skill-title">Frontend</div>
+                        </div>
+                        <div class="skill-body">
+                            <p>
+                                <strong>App de suivi personnel</strong> —
+                                Application web que j'utilise au quotidien pour
+                                le suivi de budget et de consommation d'eau. Le
+                                choix de la simplicité avec une stack minimale :
+                                pas de framework, pas de SPA. Du HTML rendu côté
+                                serveur avec juste ce qu'il faut
+                                d'interactivité.
+                            </p>
+                            <div class="tech-line">
+                                Go · Go templates · HTMX
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-left">
+                            <svg
+                                class="skill-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="5"
+                                    y="2"
+                                    width="14"
+                                    height="20"
+                                    rx="2"
+                                    ry="2"
+                                />
+                                <line x1="12" y1="18" x2="12.01" y2="18" />
+                            </svg>
+                            <div class="skill-title">Mobile</div>
+                        </div>
+                        <div class="skill-body">
+                            <p>
+                                <strong>Application bancaire mobile</strong> —
+                                Développement, évolution et maintenance de
+                                l'application mobile de l'espace client d'une
+                                néobanque. Parmi les projets notables : la mise
+                                en place complète d'Apple Pay comme moyen de
+                                paiement, du provisioning des cartes côté
+                                serveur jusqu'à l'intégration du SDK Apple et la
+                                certification. Un projet transversal backend +
+                                mobile sur lequel j'ai participé.
+                            </p>
+                            <div class="tech-line">
+                                Scala · React Native · Swift
+                            </div>
+                            <p class="skill-note">
+                                Habitué à travailler avec des UX designers, je
+                                sais passer d'une maquette à un produit
+                                fonctionnel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-left">
+                            <svg
+                                class="skill-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline points="4 17 10 11 4 5" />
+                                <line x1="12" y1="19" x2="20" y2="19" />
+                            </svg>
+                            <div class="skill-title">
+                                Linux &<br />open-source
+                            </div>
+                        </div>
+                        <div class="skill-body">
+                            <p>
+                                <strong>Plugin KIO — kDrive × Dolphin</strong> —
+                                Développement d'une extension pour le
+                                gestionnaire de fichiers Dolphin (KDE)
+                                permettant de naviguer, lire et écrire sur le
+                                stockage cloud kDrive d'Infomaniak directement
+                                depuis l'explorateur de fichiers, comme un
+                                disque local.
+                            </p>
+                            <div class="tech-line">
+                                C++ · Qt · KDE Frameworks
+                                <span class="wip-badge">en cours</span>
+                            </div>
+
+                            <div class="screenshot-container">
+                                <img
+                                    src="static/dolphin-kdrive.png"
+                                    alt="Plugin KIO kDrive dans Dolphin"
+                                />
+                                <div class="screenshot-caption">
+                                    kDrive intégré nativement dans Dolphin via
+                                    le plugin KIO
+                                </div>
+                            </div>
+
+                            <p class="skill-note">
+                                J'administre aussi mon propre serveur Linux
+                                (systemd, shell scripting, Docker).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mindset">
+            <div class="section-inner">
+                <div class="section-label">Comment je travaille</div>
+                <div class="mindset-items">
+                    <div class="mindset-item">
+                        <div class="mindset-left">
+                            <svg
+                                class="mindset-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                                <polyline points="2 17 12 22 22 17" />
+                                <polyline points="2 12 12 17 22 12" />
+                            </svg>
+                            <div class="mindset-label">Pragmatisme</div>
+                        </div>
+                        <p class="mindset-text">
+                            Une architecture micro-service et événementielle
+                            avec Kafka peut être nécessaire. Mais un monolithe
+                            Go avec du HTML rendu côté serveur peut suffire.
+                            Tout dépend du contexte.
+                        </p>
+                    </div>
+
+                    <div class="mindset-item">
+                        <div class="mindset-left">
+                            <svg
+                                class="mindset-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="m15 12-9.373 9.373a1 1 0 0 1-3.001-3L12 9"
+                                />
+                                <path d="m18 15 4-4" />
+                                <path
+                                    d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172v-.344a2 2 0 0 0-.586-1.414l-1.657-1.657A6 6 0 0 0 12.516 3H9l1.243 1.243A6 6 0 0 1 12 8.485V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"
+                                />
+                            </svg>
+                            <div class="mindset-label">Autonomie</div>
+                        </div>
+                        <p class="mindset-text">
+                            Je développe, je déploie, je maintiens. J'administre
+                            mon propre serveur, ce qui me permet d'intervenir
+                            aussi sur les aspects déploiement et exploitation.
+                        </p>
+                    </div>
+
+                    <div class="mindset-item">
+                        <div class="mindset-left">
+                            <svg
+                                class="mindset-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                            <div class="mindset-label">Intégration</div>
+                        </div>
+                        <p class="mindset-text">
+                            Mes expériences m'ont habituées à lire et comprendre
+                            de grandes codebases avant d'intervenir. Je prends
+                            le temps de comprendre le contexte.
+                        </p>
+                    </div>
+
+                    <div class="mindset-item">
+                        <div class="mindset-left">
+                            <svg
+                                class="mindset-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M6 16c5 0 7-8 12-8a4 4 0 0 1 0 8c-5 0-7-8-12-8a4 4 0 1 0 0 8"
+                                />
+                            </svg>
+                            <div class="mindset-label">Flexibilité</div>
+                        </div>
+                        <p class="mindset-text">
+                            J'ai travaillé avec Scala, Go, Swift, TypeScript, Qt
+                            selon les projets. Ce qui m'intéresse c'est répondre
+                            au besoin. Je m'adapte à l'environnement technique.
+                        </p>
+                    </div>
+
+                    <div class="mindset-item">
+                        <div class="mindset-left">
+                            <svg
+                                class="mindset-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <div class="mindset-label">Remote</div>
+                        </div>
+                        <p class="mindset-text">
+                            Basé à Nantes, je travaille à distance ou sur site
+                            selon les besoins.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="section-inner">
+                <div class="section-label">Contact</div>
+                <p class="contact-cta">Un projet, une question ?</p>
+                <p id="js-contact-openToWork"></p>
+                <div class="contact-links">
+                    <a href="#tally-open=Ek02Kl" class="contact-link primary"
+                        >Me contacter</a
+                    >
+                    <a
+                        href="https://www.linkedin.com/in/maxencepapillon"
+                        class="contact-link"
+                        >LinkedIn</a
+                    >
+                    <a
+                        href="https://www.linkedin.com/in/maxencepapillon"
+                        class="contact-link"
+                        >GitHub</a
+                    >
+                </div>
+            </div>
+        </section>
+
+        <footer>Maxence · Développeur freelance · Nantes</footer>
+
+        <script>
+            const openToWork = true;
+
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    const target = document.querySelector(
+                        this.getAttribute("href"),
+                    );
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                });
+            });
+
+            const $heroOtw = document.getElementById("js-hero-openToWork");
+            const $contactOtw = document.getElementById(
+                "js-contact-openToWork",
+            );
+
+            if (openToWork) {
+                $heroOtw.innerText = "Disponible pour une nouvelle mission";
+                $contactOtw.innerText =
+                    "Disponible dès maintenant pour une nouvelle mission.";
+            } else {
+                $heroOtw.innerText =
+                    "En mission · Ouvert aux échanges pour des projets à venir";
+                $contactOtw.innerText =
+                    "Actuellement en mission. Ouvert aux échanges pour des projets à venir.";
+            }
+        </script>
+
+        <!-- 100% privacy-first analytics -->
+        <script
+            data-collect-dnt="true"
+            async
+            src="https://scripts.simpleanalyticscdn.com/latest.js"
+        ></script>
+    </body>
+</html>
