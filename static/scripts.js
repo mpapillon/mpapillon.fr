@@ -35,22 +35,29 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   const $prevBtn = document.getElementById("js-carousel-prev");
   const $nextBtn = document.getElementById("js-carousel-next");
   const $captionEl = document.getElementById("js-carousel-caption");
-  const $imgs = document.querySelectorAll(".js-carousel-img");
-
-  const captions = Array.from($imgs, (e) => e.dataset.caption);
+  const $slides = document.querySelectorAll(".js-carousel-slide");
 
   let current = 0;
   const total = $dots.length;
 
+  const captions = Array.from($slides, (e) => e.dataset.caption);
+
   $captionEl.textContent = captions[current];
 
-  function goTo(index) {
-    current = (index + total) % total;
-    $track.style.transform = "translateX(-" + current * 100 + "%)";
+  function syncUI(current) {
     $dots.forEach(function (d, i) {
       d.classList.toggle("active", i === current);
     });
     $captionEl.textContent = captions[current];
+  }
+
+  function goTo(index) {
+    current = (index + total) % total;
+    $track.scrollTo({
+      left: current * $track.offsetWidth,
+      behavior: "smooth",
+    });
+    syncUI(current);
   }
 
   $prevBtn.addEventListener("click", function () {
@@ -63,5 +70,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     dot.addEventListener("click", function () {
       goTo(i);
     });
+  });
+
+  $track.addEventListener("scrollend", function () {
+    const index = Math.round($track.scrollLeft / $track.offsetWidth);
+    syncUI(index);
   });
 })();

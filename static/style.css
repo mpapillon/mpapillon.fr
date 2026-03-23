@@ -407,6 +407,8 @@ section {
     border: 1px solid var(--accent);
     border-radius: 6px;
     transition: all 0.2s;
+    display: flex;
+    align-items: center;
 }
 
 .contact-link:hover {
@@ -444,19 +446,30 @@ footer {
 
 .carousel-track {
     display: flex;
-    transition: transform 0.4s ease;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
 }
 
 .carousel-slide {
     min-width: 100%;
+    aspect-ratio: 8 / 5;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.carousel-slide a {
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-slide img {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
     display: block;
 }
 
