@@ -197,16 +197,6 @@ section {
     border-radius: 50%;
 }
 
-@keyframes pulse {
-    0%,
-    100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.4;
-    }
-}
-
 /* — SECTION HEADERS — */
 .section-label {
     font-family: var(--mono);
